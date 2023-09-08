@@ -1,26 +1,15 @@
 <?php
+ $serverName = "tu_servidor";
+ $connectionOptions = array(
+     "Database" => "tpBD",
+     "Uid" => "hotel",
+     "PWD" => "123"
+ );
  
- class Conexion{ 
-
-    function ConexionBD(){
-        $host = 'localhost';
-        $bdname = 'Hotel';
-        $username = '';
-        $password = "root";
-        $puerto = 1433;
-
-        try{
-            $conn = new PDO ("sqlsrv:Server=$host, $puerto;Database=$bdname", $username, $password);
-            echo "Se conectó esta mierda";
-        }
-        catch(PDOException $exp){
-            echo "No se conectó esta mierda: error", $exp;
-        }
-
-        return $conn;
-
-    }
-
+ $conn = sqlsrv_connect($serverName, $connectionOptions);
+ 
+ if (!$conn) {
+     die("Error de conexión: " . sqlsrv_errors());
  }
 
  ?>
