@@ -1,5 +1,5 @@
 <?php
- $serverName = "tu_servidor";
+ /*$serverName = "tu_servidor";
  $connectionOptions = array(
      "Database" => "tpBD",
      "Uid" => "hotel",
@@ -10,6 +10,5 @@
  
  if (!$conn) {
      die("Error de conexión: " . sqlsrv_errors());
- }
-
+ }*/
  ?>
