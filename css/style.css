@@ -1,0 +1,137 @@
+:root {
+    --azul-oscuro: #003b95;
+    --azul-medio: #0753c488;
+    --azul-claro: #0753c4f1;
+}
+
+.contenedor {
+    padding-right: 100px;
+    padding-left: 100px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*home*/
+.encabezado {
+    background: var(--azul-oscuro);
+    width: 100%;
+    height: 385px;
+}
+
+.menu-layout {
+    justify-content: left;
+}
+
+@media (max-width: 1400px) {
+    .contenedor {
+        max-width: 1320px;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .contenedor {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 991px) {
+    .navbar {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+
+@media (max-width: 991px) {
+    .contenedor {
+        max-width: 960px;
+    }
+
+    .navbar {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        max-width: 720px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contenedor {
+        max-width: 540px;
+    }
+}
+
+.cont-title {
+    color: white;
+    font-family: system-ui;
+    margin-top: 110px;
+}
+
+h1.title {
+    font-weight: bolder;
+    font-size: 4rem;
+}
+
+button.nav-home-btn {
+    background: transparent;
+    margin-right: 20px;
+    padding: 5px 20px 5px 20px;
+    color: white;
+    border-radius: 50px;
+    font-size: 19px;
+    border: none;
+    font-weight: 100;
+    align-items: center;
+    display: flex;
+}
+
+button.nav-home-btn:hover {
+    background: #0753c488;
+}
+
+button.nav-home-btn.active {
+    border: 1px solid white;
+    background: #0753c4f1;
+}
+
+/*Nav bar*/
+
+.navbar {
+    background: var(--azul-oscuro);
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+a.navbar-brand {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.nav-layout {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+button.btn-header {
+    padding: 8px 15px 9px 15px;
+    border-radius: 5px;
+    background: white;
+    border: 1px solid var(--azul-claro);
+    color: var(--azul-claro);
+    font-size: 17px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+div#navbarsExample05 {
+    justify-content: end;
+}
