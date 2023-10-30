@@ -2,6 +2,7 @@
     --azul-oscuro: #003b95;
     --azul-medio: #0753c488;
     --azul-claro: #0753c4f1;
+    --blanco: #ffff;
 }
 
 .contenedor {
@@ -141,4 +142,37 @@ button.btn-header {
 
 div#navbarsExample05 {
     justify-content: end;
+}
+
+.form {
+    margin-top: 50px;
+    padding: 30px;
+    height: 370px;
+    width: 500px;
+    background: #eceef1;
+    border-radius: 10px;
+}
+
+.form h2{
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: var(--azul-oscuro);
+}
+
+.form input{
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.form .btn{
+    background-color: var(--azul-oscuro);
+    padding: 10px;
+    color: var(--blanco);
+    width: 100%;
+}
+
+.form a {
+    color: var(--azul-claro);
+    text-align: left;
+    text-decoration: none;
 }
