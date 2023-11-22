@@ -144,35 +144,77 @@ div#navbarsExample05 {
     justify-content: end;
 }
 
-.form {
+/*REGISTRO Y LOGIN*/
+
+.formGRANDE {
+    text-align: -webkit-center;
+}
+
+.formm {
     margin-top: 50px;
     padding: 30px;
-    height: 370px;
-    width: 500px;
+    height: 100%;
+    width: 420px;
     background: #eceef1;
     border-radius: 10px;
 }
 
-.form h2{
+.input-group {
+    width: 350px;
+}
+
+form h2 {
     margin-bottom: 20px;
     font-weight: 700;
     color: var(--azul-oscuro);
 }
 
-.form input{
+form input {
     padding: 15px;
     margin-bottom: 10px;
 }
 
-.form .btn{
+form .btn {
     background-color: var(--azul-oscuro);
     padding: 10px;
     color: var(--blanco);
     width: 100%;
 }
 
-.form a {
+form a {
     color: var(--azul-claro);
     text-align: left;
+    text-decoration: none;
+}
+
+/*FOOTER*/
+
+div#redesS {
+    color: var(--blanco);
+}
+
+footer.text-center.text-lg-start.text-muted.sticky-bottom {
+    margin-bottom: -100px;
+    margin-top: 80px;
+}
+
+footer {
+    background-color: var(--azul-oscuro);
+}
+
+div#redesS\ barra {
+    background-color: var(--azul-claro);
+    color: var(--blanco);
+}
+
+.logo-footer {
+    width: 40px;
+}
+
+.footer-a {
+    text-decoration: none;
+}
+
+#redesS a i {
     text-decoration: none;
 }
