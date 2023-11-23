@@ -13,6 +13,8 @@
     <script src="https://kit.fontawesome.com/549206ac20.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="login_comprobaciones.js"></script>
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
