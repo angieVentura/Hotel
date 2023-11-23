@@ -12,8 +12,8 @@ require_once("tablaUsu.php");
     <tbody>
         <?php foreach ($usuarios2 as $usu) { ?>
             <tr>
-                <td class="inf"><?php echo $usu['Nombre'] ?></td>
-                <td class="inf"><?php echo $usu['Email'] ?></td>
+                <td><?php echo $usu['Nombre'] ?></td>
+                <td><?php echo $usu['Email'] ?></td>
             </tr>
         <?php } ?>
     </tbody>

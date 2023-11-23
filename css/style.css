@@ -312,11 +312,10 @@ div#redesS\ barra {
 
 /*TABLAS*/
 
-.table {
+table {
     font: 100%/30px 'Helvetica Neue', helvetica, arial, sans-serif;
     border-collapse: separate;
     text-align: left;
-    margin-bottom: 80px;
 }
 
 .table th {
@@ -337,7 +336,7 @@ tbody tr:nth-child(2n) {
     background: #0753c423;
 }
 
-tbody:hover .inf {
+tbody:hover td {
     color: transparent;
     text-shadow: 0 0 2px #aaa;
 }
