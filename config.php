@@ -1,7 +1,7 @@
 <?php
 try {
     // Configuración de la conexión PDO
-    $dsn = "sqlsrv:Server=ANGIE\SQLEXPRESS;Database=tpBD";
+    $dsn = "sqlsrv:Server=DESKTOP-RK0SM4A\SQLEXPRESS;Database=tpBD";
     $usuario = "";
     $contrasena = "root";
 
