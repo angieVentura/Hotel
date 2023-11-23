@@ -142,32 +142,32 @@
         <div class="swiper-wrapper">
 
             <?php foreach ($habitaciones as $habitacion) { ?>
-            <div class="swiper-slide car">
-                <div class="card card-rec" style="width: 16rem;">
-                    <a href=''>
-                        <img src="images/habitaciones/habitacion (1).jpg" class="card-img-top" alt="...">
-                    </a>
-                    <div class="card-body">
+                <div class="swiper-slide car">
+                    <div class="card card-rec" style="width: 16rem;">
+                        <a href=''>
+                            <img src="images/habitaciones/habitacion (1).jpg" class="card-img-top" alt="...">
 
-                        <h5 class="card-title">
-                            <div class="cont-res"> <?php echo $habitacion['Numero']; ?></div>
-                        </h5>
-                        <p class="card-text card-pais">
-                        <em><?php echo $habitacion['Nombre']; ?></em>
-                        </p>
-                        <p class="card-text descripcion-carrusel">
-                            Desde: <b>$<?php echo $habitacion['Precio']; ?></b>
-                        </p>
+                            <div class="card-body">
 
-                        <div class="btncard">
+                                <h5 class="card-title">
+                                    <div class="cont-res"> <?php echo $habitacion['Numero']; ?></div>
+                                </h5>
+                                <p class="card-text card-pais">
+                                    <em><?php echo $habitacion['Nombre']; ?></em>
+                                </p>
+                                <p class="card-text descripcion-carrusel">
+                                    Desde: <b>$<?php echo $habitacion['Precio']; ?></b>
+                                </p>
 
-                        </div>
+                                <div class="btncard">
 
+                                </div>
+
+                            </div>
+                        </a>
                     </div>
-
                 </div>
-            </div>
-            <?php }?>
+            <?php } ?>
 
         </div>
         <div id="der1" class="swiper-button-next-h"><i class="fa-solid fa-chevron-left"></i></div>
@@ -184,29 +184,34 @@
 
         <div class="swiper-wrapper">
 
-        <?php foreach ($salones as $salon) { ?>
-            <div class="swiper-slide car">
-                <div class="card card-rec" style="width: 16rem;">
-                    <a href=''>
-                        <img src="images/habitaciones/habitacion (1).jpg" class="card-img-top" alt="...">
-                    </a>
-                    <div class="card-body">
+            <?php foreach ($salones as $salon) { ?>
+                <div class="swiper-slide car">
+                    <div class="card card-rec" style="width: 16rem;">
+                        <a href=''>
+                           
+                            <?php if (file_exists('images/habitaciones/' . $salon['ID'] . '/habitacion.jpg')) { ?>
+                                <img  class="card-img-top" src="images/habitaciones/<?php echo $salon['ID'] ?>/habitacion.jpg" alt="">
+                            <?php  } else { ?>
+                                <img  class="card-img-top" src="images/habitaciones/1/habitacion.jpg" alt="">
+                            <?php } ?>
+                            <div class="card-body">
 
-                        <h5 class="card-title">
-                            <div class="cont-res"> <?php echo $salon['Numero']; ?></div>
-                        </h5>
-                        <p class="card-text card-pais">
-                        <em><?php echo $salon['Tamanio']; ?>m²</em>
-                        </p>
-                        <p class="card-text descripcion-carrusel">
-                            Desde: <b>$<?php echo $salon['Precio']; ?></b>
-                        </p>
-                        <div class="btncard">
-                        </div>
+                                <h5 class="card-title">
+                                    <div class="cont-res"> <?php echo $salon['Numero']; ?></div>
+                                </h5>
+                                <p class="card-text card-pais">
+                                    <em><?php echo $salon['Tamanio']; ?>m²</em>
+                                </p>
+                                <p class="card-text descripcion-carrusel">
+                                    Desde: <b>$<?php echo $salon['Precio']; ?></b>
+                                </p>
+                                <div class="btncard">
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
-            </div>
-            <?php }?>
+            <?php } ?>
 
         </div>
         <div id="der1" class="swiper-button-next-h"><i class="fa-solid fa-chevron-left"></i></div>
@@ -216,13 +221,13 @@
 </div>
 
 <script>
-  var elementos = document.querySelectorAll('.swiper-button-prev-h');
+    var elementos = document.querySelectorAll('.swiper-button-prev-h');
 
-  elementos.forEach(function(elemento) {
-    var anchoDiv1 = document.getElementById('car').offsetWidth;
-    console.log(anchoDiv1);
-    elemento.style.marginLeft = anchoDiv1 - 43 + 'px';
-  });
+    elementos.forEach(function(elemento) {
+        var anchoDiv1 = document.getElementById('car').offsetWidth;
+        console.log(anchoDiv1);
+        elemento.style.marginLeft = anchoDiv1 - 43 + 'px';
+    });
 </script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="js/crs.js"></script>
