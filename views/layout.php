@@ -8,8 +8,9 @@
     <title>Hotel</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="scss/style.scss">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/blog/">
+    <script src="https://kit.fontawesome.com/549206ac20.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
@@ -31,47 +32,9 @@
 </head>
 
 <body>
-
-    <nav class="navbar navbar-expand-lg navbar-dark " aria-label="Fifth navbar example">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Hotel</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarsExample05">
-                <a href="register.php">
-                    <button class="btn-header">
-                        Registrarse
-                    </button>
-                </a>
-                <a href="login.php">
-                    <button class="btn-header">
-                        Inicio Sesión
-                    </button>
-                </a>
-            </div>
-        </div>
-    </nav>
-
-    <div class="encabezado">
-        <div class="encabezado-cont contenedor">
-            <div class="menu">
-                <nav class="nav menu-layout">
-                    <button class="nav-home-btn active">
-                        <i class="ri-hotel-bed-line nav-layout"></i> Estadías
-                    </button>
-                    <button class="nav-home-btn">
-                        <i class="fa-solid fa-party-horn"></i> Alquiler de salones
-                    </button>
-                    <button class="nav-home-btn">
-                        Eventos
-                    </button>
-                </nav>
-            </div>
-        </div>
-    </div>
-
     <?php
+    require_once "menu.php";
+
     $view = (isset($view)) ? $view : 'home';
     require_once $view . ".php";
     ?>
