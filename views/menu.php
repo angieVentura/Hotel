@@ -10,11 +10,19 @@
                         Registrarse
                     </button>
                 </a>
+                <?php if(!isset($_SESSION['Email'])){ ?>
                 <a href="login.php">
                     <button class="btn-header">
-                        Inicio Sesión
+                        Iniciar sesion
                     </button>
                 </a>
+                <?php } else {?>
+                <a href="logout.php">
+                    <button class="btn-header">
+                        Cerrar sesion
+                    </button>
+                </a>
+                <?php }?>
             </div>
         </div>
     </nav>
