@@ -3,6 +3,13 @@
     --azul-medio: #0753c488;
     --azul-claro: #0753c4f1;
     --blanco: #ffff;
+    --gray: rgb(68, 68, 68);
+    --swiper-navigation-size: 40px;
+}
+
+body{
+    padding-top: 0px;
+    margin: 0;
 }
 
 .contenedor {
@@ -12,7 +19,25 @@
     margin-left: auto;
 }
 
+.contenedor-car {
+    padding-right: 98px;
+    padding-left: 98px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 /*home*/
+
+.swiper-slide.car {
+    flex-shrink: 0;
+    width: 264px;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+    display: flex;
+    justify-content: center;
+}
+
 .encabezado {
     background: var(--azul-oscuro);
     width: 100%;
@@ -30,9 +55,41 @@
     justify-content: left;
 }
 
+
+.contenedor {
+    padding-top: 50px;
+}
+
+
+
+.titulo-eventos{
+    font-weight: 700;
+    color: var(--gray);
+    font-size: 30px;
+    padding-bottom: 10px;
+    padding-top: 40px;
+}
+.titulo-car{
+    font-weight: 700;
+    color: var(--gray);
+    font-size: 30px;
+    padding-bottom: 10px;
+   
+}
+
+button.btn.btn-outline-secondary{
+    background: white;
+    color: black;
+}
+
+div#carouselExampleCaptions {
+    margin-bottom: 50px;
+}
+
 @media (max-width: 1400px) {
     .contenedor {
         max-width: 1320px;
+        padding-top: 0px;
     }
 
 }
@@ -76,7 +133,8 @@
 .cont-title {
     color: white;
     font-family: system-ui;
-    padding-top: 45px;
+    padding-top: 40px;
+    padding-bottom: 44px;
 }
 
 h1.title {
@@ -106,6 +164,39 @@ button.nav-home-btn.active {
     background: #0753c4f1;
 }
 
+div#der1, .swiper-button-prev-h {
+    position: absolute;
+    top: var(--swiper-navigation-top-offset,50%);
+    width: calc(var(--swiper-navigation-size)/ 28 * 27);
+    height: 40px;
+    margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+    z-index: 20;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray);
+    background: white;
+    border-radius: 50%;
+    font-weight: bold;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+h5.card-title {
+    color: black;
+    font-weight: 600;
+}
+p.card-text {
+    color: black;
+}
+
+div#der1 {
+    margin-left: 1px;
+}
+
+
+
+
 /*Nav bar*/
 
 .navbar {
@@ -115,8 +206,8 @@ button.nav-home-btn.active {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom:0.5rem;
 }
 
 a.navbar-brand {
@@ -130,12 +221,12 @@ a.navbar-brand {
 }
 
 button.btn-header {
-    padding: 8px 15px 9px 15px;
+    padding: 5px 15px 5px 15px;
     border-radius: 5px;
     background: white;
     border: 1px solid var(--azul-claro);
     color: var(--azul-claro);
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 600;
     margin-left: 10px;
 }
@@ -153,18 +244,18 @@ div#navbarsExample05 {
     border-radius: 10px;
 }
 
-.form h2{
+.form h2 {
     margin-bottom: 20px;
     font-weight: 700;
     color: var(--azul-oscuro);
 }
 
-.form input{
+.form input {
     padding: 15px;
     margin-bottom: 10px;
 }
 
-.form .btn{
+.form .btn {
     background-color: var(--azul-oscuro);
     padding: 10px;
     color: var(--blanco);
@@ -176,3 +267,4 @@ div#navbarsExample05 {
     text-align: left;
     text-decoration: none;
 }
+
