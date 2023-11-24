@@ -9,7 +9,7 @@
                     <i class="fa-solid fa-party-horn"></i> Alquiler de salones
                 </button>
                 <button class="nav-home-btn">
-                    Eventos
+                <a href="Ver_eventos.php" >Eventos</a>
                 </button>
             </nav>
         </div>
