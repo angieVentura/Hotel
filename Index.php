@@ -1,5 +1,6 @@
 <?php
 require_once("config.php");
+require_once("sesion.php") ;
 $view = "home";
 
 $query = "SELECT Habitaciones.ID, Numero, Precio, Nombre from Habitaciones INNER JOIN Tipo_Habitaciones ON Habitaciones.TipoHabitacionID = Tipo_Habitaciones.ID";

@@ -1,6 +1,6 @@
 <?php
 require_once "config.php";
-require_once "session_start.php";
+require_once("sesion.php") ;
 $_SESSION['Email'];
 
 $consulta = $conn->prepare("SELECT MAX(ReservacionID) as numero FROM Reservaciones");

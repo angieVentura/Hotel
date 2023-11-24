@@ -11,7 +11,7 @@
                 <input type="text" class="form-control" placeholder="Nombre" name="Nombre" required>
             </div>
             <div class="input-group mb-3">
-                <input type="tel" class="form-control" placeholder="Numero Telefonico" name="Numero" pattern=".{10}" title="Debe ser un numero telefonico valido , deben ser 10 digitos" required>
+                <input type="tel" class="form-control" placeholder="Numero Telefonico" name="Numero" required>
             </div>
             <div class="input-group mb-3">
                 <input type="email" class="form-control" placeholder="Correo electronico" name="Correo" required>

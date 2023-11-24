@@ -1,4 +1,5 @@
 <?php
+require_once("sesion.php") ;
 require_once("config.php");
 
 $ID = $_GET['ID'];
