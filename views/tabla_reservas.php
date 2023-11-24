@@ -1,14 +1,14 @@
 <?php 
 try {
-    $consulta = $conn->prepare("SELECT * FROM Empleados");
+    $consulta = $conn->prepare("SELECT * FROM Reservaciones");
     $consulta->execute();
 
     // Obtener el resultado como un array asociativo
-    $empleados = $consulta->fetchAll(PDO::FETCH_ASSOC);
+    $reservas = $consulta->fetchAll(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
 }
-$numRows = count($empleados);
+$numRows = count($reservas);
 
 $pag = (isset($_GET['pag']) ? $_GET['pag'] : 1);
 
@@ -16,13 +16,13 @@ $desde = CANT_REG_PAG * ($pag - 1);
 
 $por_pag = CANT_REG_PAG;
 
-$query2 = "SELECT * FROM (SELECT *, ROW_NUMBER() OVER (ORDER BY Nombre) AS RowNum FROM Empleados) AS SubQuery WHERE RowNum BETWEEN $desde + 1 AND $desde + $por_pag";
+$query2 = "SELECT * FROM (SELECT *, ROW_NUMBER() OVER (ORDER BY ReservacionID) AS RowNum FROM Reservaciones) AS SubQuery WHERE RowNum BETWEEN $desde + 1 AND $desde + $por_pag";
 $result2 = $conn->query($query2);
 if(!$result2){
     throw new Exception("Error en la consulta: " . implode(", ", $conn->errorInfo()));
 }
 
-$empleados2 = $result2->fetchAll(PDO::FETCH_ASSOC);
+$reservas2 = $result2->fetchAll(PDO::FETCH_ASSOC);
 $cant_pag = ceil($numRows/CANT_REG_PAG);
 
 
@@ -32,20 +32,20 @@ $cant_pag = ceil($numRows/CANT_REG_PAG);
     <thead>
         <tr>
         <th>Id</th>
-        <th>Nombre</th>
-        <th>Puesto</th>
-        <th>Salario</th>
-        <th>Fecha de comienzo</th>
+        <th>ClienteID</th>
+        <th>HabitacionID</th>
+        <th>FechaInicio</th>
+        <th>FechaFin</th>
         </tr>
     </thead>
     <tbody>
-        <?php foreach($empleados2 as $empleado){
+        <?php foreach($reservas2 as $reserva){
             echo "<tr>
-            <td>" . $empleado['EmpleadoID'] . "</td>
-            <td>" . $empleado['Nombre'] . "</td>
-            <td>" . $empleado['Puesto'] . "</td>
-            <td>" . $empleado['Salario'] . "</td>
-            <td>" . $empleado['FechaContratacion'] . "</td>
+            <td>" . $reserva['ReservacionID'] . "</td>
+            <td>" . $reserva['ClienteID'] . "</td>
+            <td>" . $reserva['HabitacionID'] . "</td>
+            <td>" . $reserva['FechaInicio'] . "</td>
+            <td>" . $reserva['FechaFin'] . "</td>
         </tr>";
         }?>
     </tbody>
@@ -59,7 +59,7 @@ $cant_pag = ceil($numRows/CANT_REG_PAG);
                    <span class='page-link'>" . $i . "</span>
                </li>";
         } else {
-          echo "  <li class='page-item'><a class='page-link' href='tabla_empleados.php?pag=" . $i . "'>" . $i . "</a></li>";
+          echo "  <li class='page-item'><a class='page-link' href='tabla_reservas.php?pag=" . $i . "'>" . $i . "</a></li>";
         }
       }
       ?>
