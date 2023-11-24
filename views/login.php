@@ -1,15 +1,17 @@
-<div class="container form">
+<div class="container formGRANDE">
     <form action="login_enviar.php" method="POST">
-        <h2>Inicia sesión</h2>
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Correo electronico" id="correo" name="correo" onchange="validarCorreo()">
+        <div class="formm">
+            <h2>Inicia sesión</h1>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Correo electronico" id="correo" name="correo" onchange="validarCorreo()">
+                </div>
+                <div class="input-group mb-3">
+                    <input type="password" class="form-control" placeholder="Contraseña" id="password" name="password" onchange="contarCaracteres()">
+                </div>
+                <input type="submit" class="btn btn-log" id="boton" value="Iniciar Sesion"></button>
+                <br>
+                <a href=" #">¿Olvidaste tu contraseña?</a> o <a href="register.php">¿No tenes una cuenta?</a>
         </div>
-        <div class="input-group mb-3">
-            <input type="password" class="form-control" placeholder="Contraseña" id="password" name="password" onchange="contarCaracteres()">
-        </div>
-        <input type="submit" class="btn btn-log" id="boton" value="Iniciar Sesion"></button>
-        <br>
-        <a href=" #">¿Olvidaste tu contraseña?</a> o <a href="register.php">¿No tenes una cuenta?</a>
     </form>
     <div id="aviso" style="Color: RED"></div>
 </div>
@@ -17,12 +19,12 @@
 <script>
     var correoEstado = false;
     var contrasenaEstado = false;
-    
+
     function validarCorreo() {
         var correo = document.getElementById('correo');
         var correoValido = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
         var aviso = document.getElementById('aviso');
-        
+
         correoEstado = true;
         aviso.textContent = "";
         if (!correoValido.test(correo.value)) {
@@ -38,7 +40,7 @@
         var longitud = texto.length;
         // Obtener el elemento span donde se mostrará el contador
         var aviso = document.getElementById('aviso');
-        
+
         correoEstado = true;
         aviso.textContent = "";
         if (longitud > 0 && longitud < 8) {
