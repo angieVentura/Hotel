@@ -73,6 +73,7 @@
                         <h6 class="text-uppercase fw-bold mb-4">Contacto</h6>
                         <p><i class="fas fa-envelope me-3"></i>Hotel@gmail.com </p>
                         <p><i class="fas fa-phone me-3"></i> +54 9 11 XXXX-XXXX</p>
+                        <p><i class="fas fa-phone me-3"></i><a href="Politica.php">Politica y privacidad</a></p>
                     </div>
                 </div>
                 <!-- Grid row -->
