@@ -284,6 +284,87 @@ form a {
     text-decoration: none;
 }
 
+/*Ver Habitacion*/
+
+.foto-habitacion{
+    max-height: 450px;
+    overflow: hidden;
+}
+
+/*Perfil*/
+
+.icon-user{
+    background: transparent;
+    padding: 0;
+    border: none;
+}
+
+.img-user{
+    height: 35px;
+}
+
+.btn-check:focus+.btn-secondary, .btn-secondary:focus {
+    color: #fff;
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0);
+}
+.btn-check:hover+.btn-secondary, .btn-secondary:hover {
+    color: #fff;
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0);
+}
+
+.btn {
+    transition:none;
+}
+
+
+.sec-cont-per{
+    display: flex;
+    vertical-align: middle;
+    padding: 0.5rem 0rem;
+}
+
+button.list-group-item.list-group-item-action.sec-cont-per {
+    align-items: center;
+}
+
+.icon-cont-perfil {
+    height: auto;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center;
+}
+
+.change {
+    width: auto;
+    display: contents;
+}
+
+.col-2.btn-editar {
+    display: flex;
+    justify-content: end;
+    padding-right: 12px;
+}
+
+.mostrar, .editar{
+    display: contents;
+}
+
+.col-4.btn-editar {
+    display: flex;
+    justify-content: end;
+    padding-right: 0.7rem;
+}
+
+.form-perfil{
+    display: contents;
+}
+
 /*FOOTER*/
 
 div#redesS {
