@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-expand-lg navbar-dark " aria-label="Fifth navbar example">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.php">Hotel</a>
@@ -23,7 +24,9 @@
                         <img class="img-user" src="images/user/usuario.jpg" alt="">
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end">
-                        <li><button onclick="location.href='perfil.php'" class="dropdown-item" type="button">Perfil</button></li>
+                        <li>
+                            <button onclick="location.href='<?php echo isset($_SESSION['ID']) ? 'perfil.php?id_usu=' . $_SESSION['ID'] : '#'; ?>'" class="dropdown-item" type="button">Perfil</button>
+                        </li>
                         <li><button onclick="location.href='logout.php'" class="dropdown-item" type="button">Cerrar Sesión</button></li>
                     </ul>
                 </div>

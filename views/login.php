@@ -8,7 +8,7 @@
                 <div class="input-group mb-3">
                     <input type="password" class="form-control" placeholder="Contraseña" id="password" name="password" onchange="contarCaracteres()">
                 </div>
-                <input type="submit" class="btn btn-log" id="boton" value="Iniciar Sesion"></button>
+                <input type="submit" class="btn ing btn-log" id="boton" value="Iniciar Sesion"></button>
                 <br>
                 <a href=" #">¿Olvidaste tu contraseña?</a> o <a href="register.php">¿No tenes una cuenta?</a>
         </div>

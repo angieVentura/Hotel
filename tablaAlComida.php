@@ -1,5 +1,6 @@
 <?php
 require_once("config.php");
+require_once("sesion.php") ;
 $view = "tablaAlComida";
 
 $query = "SELECT COUNT(Nombre) as cant, Nombre FROM Comidas GROUP BY Nombre";

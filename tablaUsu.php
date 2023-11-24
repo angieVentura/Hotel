@@ -1,5 +1,6 @@
 <?php
 require_once("config.php");
+require_once("sesion.php") ;
 $view = "tablaUsu";
 
 $query = "SELECT Nombre, Email from Clientes";

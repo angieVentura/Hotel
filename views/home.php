@@ -2,15 +2,30 @@
     <div class="encabezado-cont contenedor">
         <div class="menu">
             <nav class="nav menu-layout">
-                <button class="nav-home-btn active">
+                <button class="nav-home-btn active" onclick="location.href='index.php'">
                     <i class="ri-hotel-bed-line nav-layout"></i> Estadías
                 </button>
-                <button class="nav-home-btn">
+                <button class="nav-home-btn" onclick="location.href='index.php'">
                     <i class="fa-solid fa-party-horn"></i> Alquiler de salones
                 </button>
-                <button class="nav-home-btn">
+                <button class="nav-home-btn" onclick="location.href='index.php'">
                     Eventos
                 </button>
+
+                <?php if (isset($_SESSION['Nombre']) && $_SESSION['Nombre'] === 'admin') {
+                ?>
+                    <!-- Código HTML del botón y el menú desplegable -->
+                    <button class="nav-home-btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Administrador
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="tablaUsu.php">Usuarios</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                <?php }
+                ?>
+
             </nav>
         </div>
     </div>
@@ -21,7 +36,7 @@
             <h1 class="title">Encontrá tu próximo alojamiento</h1>
             <h3 class="sub title">Buscá tu habitación ideal y mucho más</h3>
         </div>
-        <div class="input-group mb-3">
+        ,<!--<div class="input-group mb-3">
             <input type="text" class="form-control" aria-label="Text input with dropdown button">
             <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
             <ul class="dropdown-menu dropdown-menu-end">
@@ -87,15 +102,15 @@
                     </div>
                 </div>
             </section>
-        </div>
+        </div> -->
     </div>
 </div>
 
 <div class="contenedor">
 
-    <h3 class="titulo-eventos">Eventos</h3>
+    <!--<h3 class="titulo-eventos">Eventos</h3>
 
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -132,9 +147,9 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-    </div>
+    </div> -->
 
-    <h3 class="titulo-car">Habitaciones</h3>
+    <h3 style="margin-top: 50px" class="titulo-car">Habitaciones</h3>
 </div>
 <div class="contenedor-car">
     <div class="swiper mySwiper">
@@ -145,10 +160,10 @@
                 <div class="swiper-slide car">
                     <div class="card card-rec" style="width: 16rem;">
                         <a href='ver_mas_publi.php?ID=<?php echo $habitacion['ID']; ?>&location=home.php'>
-                        <?php if (file_exists('images/habitaciones/' . $habitacion['ID'] . '/habitacion.jpg')) { ?>
-                                <img  class="card-img-top" src="images/habitaciones/<?php echo $habitacion['ID'] ?>/habitacion.jpg" alt="">
+                            <?php if (file_exists('images/habitaciones/' . $habitacion['ID'] . '/habitacion.jpg')) { ?>
+                                <img class="card-img-top" src="images/habitaciones/<?php echo $habitacion['ID'] ?>/habitacion.jpg" alt="">
                             <?php  } else { ?>
-                                <img  class="card-img-top" src="images/habitaciones/1/habitacion.jpg" alt="">
+                                <img class="card-img-top" src="images/habitaciones/1/habitacion.jpg" alt="">
                             <?php } ?>
 
                             <div class="card-body">
@@ -192,11 +207,11 @@
                 <div class="swiper-slide car">
                     <div class="card card-rec" style="width: 16rem;">
                         <a href=''>
-                           
+
                             <?php if (file_exists('images/salones/' . $salon['ID'] . '/salon.jpg')) { ?>
-                                <img  class="card-img-top" src="images/salones/<?php echo $salon['ID'] ?>/salon.jpg" alt="">
+                                <img class="card-img-top" src="images/salones/<?php echo $salon['ID'] ?>/salon.jpg" alt="">
                             <?php  } else { ?>
-                                <img  class="card-img-top" src="images/salones/1/salon.jpg" alt="">
+                                <img class="card-img-top" src="images/salones/1/salon.jpg" alt="">
                             <?php } ?>
                             <div class="card-body">
 

@@ -271,7 +271,7 @@ form input {
     margin-bottom: 10px;
 }
 
-form .btn {
+.ing {
     background-color: var(--azul-oscuro);
     padding: 10px;
     color: var(--blanco);
@@ -292,6 +292,7 @@ form a {
 }
 
 /*Perfil*/
+
 
 .icon-user{
     background: transparent;
@@ -320,6 +321,9 @@ form a {
     transition:none;
 }
 
+.form-control{
+    margin-bottom: 0;
+}
 
 .sec-cont-per{
     display: flex;

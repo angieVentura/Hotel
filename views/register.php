@@ -14,7 +14,7 @@
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Verificar contraseña" name="Pass2">
                 </div>
-                <input class="btn btn-log" type="submit" value="Registrarse">
+                <input class="btn ing btn-log" type="submit" value="Registrarse">
                 <br>
                 <a href="login.php">¿Ya tenes una cuenta? ¡Inicia sesión!</a>
         </div>
