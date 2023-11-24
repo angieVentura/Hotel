@@ -3,7 +3,7 @@
         <div class="menu">
             <nav class="nav menu-layout">
                 <button class="nav-home-btn active">
-                    <i class="ri-hotel-bed-line nav-layout"></i> Estadías
+                    <a class="fa-solid fa-party-horn">Estadías</a> 
                 </button>
                 <?php if (isset($_SESSION['Email'])) { ?>
                     <button class="nav-home-btn" href="formulario_reserva.php">
@@ -11,7 +11,7 @@
                     </button>
                 <?php } ?>
                 <button class="nav-home-btn">
-                    Eventos
+                <a class="fa-solid fa-party-horn">Eventos </a>
                 </button>
             </nav>
         </div>
