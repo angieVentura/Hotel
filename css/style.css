@@ -4,6 +4,8 @@
     --azul-claro: #0753c4f1;
     --blanco: #ffff;
     --gray: rgb(68, 68, 68);
+    --rojo: rgba(255, 0, 0, 0.212);
+    --negro: black;
     --swiper-navigation-size: 40px;
 }
 
@@ -342,5 +344,12 @@ tbody:hover td {
 }
 
 tbody:hover tr:hover td {
-    color: var(--azul-claro);
+    color: var(--negro);
+}
+ 
+tbody .cero{
+    background: var(--rojo);
+}
+tbody tr:nth-child(2n) .cero{
+    background: var(--rojo);
 }
