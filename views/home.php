@@ -2,6 +2,7 @@
     <div class="encabezado-cont contenedor">
         <div class="menu">
             <nav class="nav menu-layout">
+
                 <button class="nav-home-btn active" onclick="location.href='index.php'">
                     <i class="ri-hotel-bed-line nav-layout"></i> Estadías
                 </button>
@@ -11,7 +12,11 @@
                 <button class="nav-home-btn" onclick="location.href='index.php'">
                     Eventos
                 </button>
-
+                <?php if (isset($_SESSION['Email'])) { ?>
+                    <button class="nav-home-btn" onclick="location.href='formulario_reserva.php'">
+                        <i class="fa-solid fa-party-horn"></i>Reservar Habitacion
+                    </button>
+                <?php } ?>
                 <?php if (isset($_SESSION['Nombre']) && $_SESSION['Nombre'] === 'admin') {
                 ?>
                     <!-- Código HTML del botón y el menú desplegable -->
