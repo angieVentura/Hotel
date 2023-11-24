@@ -2,11 +2,13 @@
     <div class="encabezado-cont contenedor">
         <div class="menu">
             <nav class="nav menu-layout">
-                <button class="nav-home-btn active">
-                    <i class="ri-hotel-bed-line nav-layout"></i> Estadías
-                </button>
+                <?php if (isset($_SESSION['Email'])) { ?>
+                    <button class="nav-home-btn" href="formulario_reserva.php">
+                        <a href="formulario_reserva.php" class="fa-solid fa-party-horn">Reservar Habitacion</a>
+                    </button>
+                <?php } ?>
                 <button class="nav-home-btn">
-                    <i class="fa-solid fa-party-horn"></i> Alquiler de salones
+                <a href="formulario_reserva.php" >Alquiler de salones</a>
                 </button>
                 <button class="nav-home-btn">
                 <a href="Ver_eventos.php" >Eventos</a>
@@ -144,8 +146,12 @@
             <?php foreach ($habitaciones as $habitacion) { ?>
                 <div class="swiper-slide car">
                     <div class="card card-rec" style="width: 16rem;">
-                        <a href=''>
-                            <img src="images/habitaciones/habitacion (1).jpg" class="card-img-top" alt="...">
+                        <a href='ver_mas_publi.php?ID=<?php echo $habitacion['ID']; ?>&location=home.php'>
+                        <?php if (file_exists('images/habitaciones/' . $habitacion['ID'] . '/habitacion.jpg')) { ?>
+                                <img  class="card-img-top" src="images/habitaciones/<?php echo $habitacion['ID'] ?>/habitacion.jpg" alt="">
+                            <?php  } else { ?>
+                                <img  class="card-img-top" src="images/habitaciones/1/habitacion.jpg" alt="">
+                            <?php } ?>
 
                             <div class="card-body">
 
@@ -189,10 +195,10 @@
                     <div class="card card-rec" style="width: 16rem;">
                         <a href=''>
                            
-                            <?php if (file_exists('images/habitaciones/' . $salon['ID'] . '/habitacion.jpg')) { ?>
-                                <img  class="card-img-top" src="images/habitaciones/<?php echo $salon['ID'] ?>/habitacion.jpg" alt="">
+                            <?php if (file_exists('images/salones/' . $salon['ID'] . '/salon.jpg')) { ?>
+                                <img  class="card-img-top" src="images/salones/<?php echo $salon['ID'] ?>/salon.jpg" alt="">
                             <?php  } else { ?>
-                                <img  class="card-img-top" src="images/habitaciones/1/habitacion.jpg" alt="">
+                                <img  class="card-img-top" src="images/salones/1/salon.jpg" alt="">
                             <?php } ?>
                             <div class="card-body">
 

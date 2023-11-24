@@ -1,6 +1,5 @@
 <?php
 try {
-    // Configuración de la conexión PDO
     $dsn = "sqlsrv:Server=DESKTOP-3KQCNSN\SQLEXPRESS;Database=tpBD";
     $usuario = "";
     $contrasena = "root";
@@ -16,3 +15,4 @@ try {
     die();
 }
  ?>
+

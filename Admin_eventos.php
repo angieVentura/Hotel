@@ -7,6 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $descripcion = $_POST["descripcion"];
     $fecha_inicio = $_POST["fecha_inicio"];
     $fecha_fin = $_POST["fecha_fin"];
+    $precio = $_POST["precio"];
 
     $imagen = $_FILES["imagen"];
     $imagen_nombre = $imagen["name"];
@@ -19,10 +20,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         move_uploaded_file($imagen_temporal, $ruta_imagen);
 
         try {
-            $sql = "INSERT INTO dbo.Eventos_Especiales (Nombre, FechaInicio, FechaFin, Imagen, Descripcion)
-            VALUES (?, ?, ?, ?, ?)";
+            $sql = "INSERT INTO dbo.Eventos_Especiales (Nombre, FechaInicio, FechaFin, Imagen, Descripcion , Precio)
+            VALUES (?, ?, ?, ?, ?,?)";
             $stmt = $conn->prepare($sql);
-            $stmt->execute([$titulo, $fecha_inicio, $fecha_fin, $ruta_imagen, $descripcion]);
+            $stmt->execute([$titulo, $fecha_inicio, $fecha_fin, $ruta_imagen, $descripcion, $precio]);
 
             header("Location: Ver_Eventos.php");
             exit();

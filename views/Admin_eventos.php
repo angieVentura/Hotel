@@ -14,6 +14,9 @@
             <div class="input-group mb-3">
                 <input type="date" class="form-control" name="fecha_fin" required title="Selecciona la fecha de fin del evento">
             </div>
+            <div class="input-group mb-3">
+                <input type="int" class="form-control" name="precio" required title="Ingrese el valor del costo de la reservacion">
+            </div>
             <div class="mb-3">
                 <input class="form-control form-control-sm" id="formFileSm" type="file" name="imagen" title="Selecciona una imagen para el evento">
             </div>

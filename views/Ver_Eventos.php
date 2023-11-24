@@ -11,6 +11,7 @@
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">Fecha de Inicio: <?php echo $evento['FechaInicio']; ?></li>
                         <li class="list-group-item">Fecha de Fin: <?php echo $evento['FechaFin']; ?></li>
+                        <li class="list-group-item">Precio: $ <?php echo $evento['Precio']; ?></li>
                     </ul>
                 </div>
             </div>
