@@ -13,6 +13,7 @@
     <script src="https://kit.fontawesome.com/549206ac20.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -37,6 +38,51 @@
     $view = (isset($view)) ? $view : 'home';
     require_once $view . ".php";
     ?>
+
+    <footer class="text-center text-lg-start text-muted sticky-bottom">
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <div class="me-5 d-none d-lg-block">
+
+            </div>
+            <div id="redesS">
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                <i class="fas fa-envelope me-3"></i>
+                </a>
+            </div>
+        </section>
+        <section>
+            <div id="redesS" class="container text-center text-md-start mt-5">
+                <div class="row mt-3">
+                    <div id="redesS" class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <h3 class="text-uppercase fw-bold mb-4">
+                            HOTEL
+                        </h3>
+                    </div>
+                    <div id="redesS" class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <p><a href="" class="text-reset footer-a">Estadías</a></p>
+                        <p><a href="" class="text-reset footer-a">Alquiler de salones</a></p>
+                        <p><a href="" class="text-reset footer-a">Eventos</a></p>
+                    </div>
+                    <div id="redesS" class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">Contacto</h6>
+                        <p><i class="fas fa-envelope me-3"></i>Hotel@gmail.com </p>
+                        <p><i class="fas fa-phone me-3"></i> +54 9 11 XXXX-XXXX</p>
+                    </div>
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Copyright -->
+        <div id="redesS barra" class="text-center p-4">
+            © 2023 Todos los derechos reservaods.
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
