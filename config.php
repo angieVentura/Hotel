@@ -1,9 +1,9 @@
 <?php
 try {
-    $dsn = "sqlsrv:Server=DESKTOP-SQAIKK4\SQLEXPRESS;Database=tpBD";
+    $dsn = "sqlsrv:Server=DESKTOP-RK0SM4A\SQLEXPRESS;Database=tpBD";
     $usuario = "";
     $contrasena = "root";
-
+    define("CANT_REG_PAG", 5);
     // Crear la conexión PDO
     $conn = new PDO($dsn, $usuario, $contrasena);
 

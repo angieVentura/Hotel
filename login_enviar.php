@@ -9,8 +9,13 @@ try {
 
     // Obtener el resultado como un array asociativo
     $result = $consulta->fetch(PDO::FETCH_ASSOC);
-   
-    if ($result['Email'] == $correo && $result['Contrasenia'] == $password) {
+    if($result == false){
+        header("Location: login.php");
+    }
+    if (!($result['Email'] == $correo && $result['Contrasenia'] == $password)) {
+        header("Location: login.php");
+    }
+    else{
         //inicio de sesion conseguido, no recuerdo que hacer aca
         session_start();
         $_SESSION['ID'] = $result['ID'];
@@ -18,7 +23,8 @@ try {
         $_SESSION['Email'] = $result['Email'];
         $_SESSION['Telefono'] = $result['Telefono'];
         $_SESSION['Direccion'] = $result['Direccion'];
-        require_once("index.php");
+
+        header("Location: index.php");
         exit();
     }
 } catch (PDOException $e) {
